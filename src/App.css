@@ -1,38 +1,264 @@
-.App {
-  text-align: center;
+* {
+  display: inline-block;
+  margin: auto;
+  max-width: 901px;
+}
+/*
+head {
+  display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.logo-container-1 {
+  display: flex;
+  margin: 0;
+}
+
+.logo-container-2 {
+  margin: 0;
+}
+
+.logo-icon {
+  background-image: url("../images/logo.png");
+  width: 42px;
+  height: 45px;
+}
+
+.logo-title {
+  margin-left: 5px;
+}
+
+.logo-text {
+  display: block;
+  font-size: 10px;
+  font-variant: small-caps;
+  color: gray;
+}
+
+.delicious {
+  display: block;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.icon {
+  width: 25px;
+  height: 24px;
+}
+
+.contact-logos {
+  margin-left: 5px;
+}
+
+.facebook {
+  background-image: url("../images/fb-icon.png");
+}
+
+
+.twitter {
+  background-image: url("../images/twit-icon.png");
+}
+
+
+.google {
+  background-image: url("../images/gp-icon.png");
+}
+
+
+.instagram {
+  background-image: url("../images/insta-icon.png");
+}
+
+.flickr {
+  background-image: url("../images/flic-icon.png");
+}
+
+.pintrist {
+  background-image: url("../images/pint-icon.png");
+}
+
+.rss {
+  background-image: url("../images/rss-icon.png");
+}
+
+.mailto {
+  background-image: url("../images/mail-icon.png");
+}
+
+.hr-box {
+  background-image: url("../images/hr-img.png");
+  width: 100%;
+  height: 10px;
+  margin-top: 20px;
+}
+
+.title-name {
+  display: block;
+  margin-top: 40px;
+  font-size: 40px;
+}
+
+.posted-print {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 901px;
+}
+
+.post-date {
+  margin: 0;
+  font-size: 11px;
+  color: grey;
+}
+
+.print-area {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.print-icon {
+  background-image: url("../images/print-icon.png");
+  width: 13px;
+  height: 10px;
+}
+
+.print-text {
+  font-size: 11px;
+  color: grey;
+}
+
+.title-picture {
+  margin-top: 20px;
+  background-image: url("../images/choco-pizza.png");
+  display: block;
+  width: 901px;
+  height: 603px;
+}
+
+.recipe-paragraph {
+  margin-top: 20px;
+  font-size: 18px;
+  text-indent: 40px;
+}
+
+.recipe-picture-area {
+  background-image: url("../images/list-bg.png");
+  width: 100%;
+  height: 305px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.recipe-list {
+  display: flex;
+  flex-direction: column;    
+}
+
+
+.checked {
+  text-decoration: line-through;
+}
+
+.checkbox-container {
+  margin: 0;
+  font-size: 22px;
+}
+
+.chopped {
+  text-indent: 15px;
+}
+
+.author-photo {
+  background-image: url("../images/van-pic.png");
+  width: 71px;
+  height: 68px;
+  margin-right: 5px;
+  margin-top: 0px;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.author-info-area {
+  display: flex;
+  margin: 0;
+  margin-left: 5px;
+}
+
+.author-name {
+  display: block;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.author-text {
+  display: block;
+  font-size: 18px;
+}
+
+.recipe-button {
+  margin: 0;
+  background-color: rgb(188, 112, 88);
   color: white;
+  width: 160px;
+  height: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.spacer {
+  width: 45%;
+  border-bottom: solid 2px lightgray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.small-logo-icon {
+  background-image: url("../images/small-logo.png");
+  width: 31px;
+  height: 33px;
 }
+
+.spacer-div {
+  display: flex;
+  justify-content: space-between;
+  width: 901px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.small-logo-text-upper {
+  color: gray;
+  font-size: 14px;
+}
+
+.small-logo-text-lower {
+  display: block;
+  color: gray;
+  font-size: 14px;
+}
+
+.floater {
+  position: relative;
+  top: -5px;
+}
+
+*/
