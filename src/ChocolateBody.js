@@ -1,4 +1,5 @@
 import React from 'react';
+import { ingredients1, ingredients2 } from './data.js';
 
 class ChocolateBody extends React.Component {
     render() {
@@ -48,53 +49,75 @@ class ChocolateBodyMiddle extends React.Component {
     }
 }
 
+class RecipeIngredients extends React.Component {
+    render() {
+        return (
+            <label className="checkbox-container">
+                <input type="checkbox" /> {this.props.ingredient}
+            </label>
+        )
+    }
+}
+
+class RecipeCheckedIngredients extends React.Component {
+    render() {
+        return (
+            <label className="checkbox-container">
+                <input type="checkbox" checked /> <span className="checked"> {this.props.ingredient} </span>
+            </label>
+        )
+    }
+}
+
+class RecipeChoppedIngredients extends React.Component {
+    render() {
+        return (
+            <label className="checkbox-container">
+                <input type="checkbox" /> {this.props.ingredient}  <br />
+                <span className="chopped">chopped</span>
+            </label>
+        )
+    }
+}
+
+class FirstIngredientList extends React.Component {
+    render() {
+        return (
+            <ul className="recipe-list left">
+          {
+              ingredients1.map((ingredient) => <RecipeIngredients ingredient={ingredient}/>)
+          }
+            </ul>
+        )
+    }
+}
+
+class SecondIngredientList extends React.Component {
+    render() {
+        return (
+            <ul className="recipe-list right">
+                {
+                    ingredients2.map((ingredient, i) => {
+                        if (i === 1 || i === 2) { 
+                        return <RecipeCheckedIngredients ingredient={ingredient}/>
+                        } else if (i === 5) {
+                        return <RecipeChoppedIngredients ingredient={ingredient}/>
+                        } else return <RecipeIngredients ingredient={ingredient}/>
+                        }
+                    )
+                }
+            </ul>
+        )
+    }
+}
 
 class ChocolateBodyBottom extends React.Component {
     render() {
         return (
             <div>
-<section className="recipe-picture-area">
-                    <ul className="recipe-list left">
-                        <label className="checkbox-container">
-                            <input type="checkbox" /> 1 1/2 cups milk
-                        </label>
-                        <label className="checkbox-container">
-                            <input type="checkbox" /> 1/2 cup mascarpone
-                        </label>
-                        <label className="checkbox-container">
-                            <input type="checkbox" /> 1/2 tsp pink salt
-                        </label>
-                        <label className="checkbox-container">
-                            <input type="checkbox" /> 1 lb Black Mission Figs
-                        </label>
-                        <label className="checkbox-container">
-                            <input type="checkbox" /> 1/2 cup brown sugar
-                        </label>
-                        <label className="checkbox-container">
-                            <input type="checkbox" /> 2-4 tbsp water
-                        </label>
-                    </ul>
-                    <ul className="recipe-list right">
-                        <label className="checkbox-container">
-                            <input type="checkbox" /> 1 1/2 cups heavy cream
-                        </label>
-                        <label className="checkbox-container">
-                            <input type="checkbox" checked /> <span className="checked"> 1/3 granulated sugar</span>
-                        </label>
-                        <label className="checkbox-container">
-                            <input type="checkbox" checked /> <span className="checked"> 2 egg yolks</span>
-                        </label>
-                        <label className="checkbox-container">
-                            <input type="checkbox" /> 1 lemon, juiced
-                        </label>
-                        <label className="checkbox-container">
-                            <input type="checkbox" /> 2 tbsp butter
-                        </label>
-                        <label className="checkbox-container">
-                            <input type="checkbox" /> 1 cup honey roasted pecans, roughly  <br />
-                            <span className="chopped">chopped</span>
-                        </label>
-                    </ul>
+                <section className="recipe-picture-area">
+                        <FirstIngredientList />
+                        <SecondIngredientList />
                 </section>
             </div>
         )

@@ -1,5 +1,13 @@
 import React from 'react';
 
+class ChocolateLinks extends React.Component {
+    render() {
+        return (
+            <a href={this.props.site + '.com'} className={this.props.site + ' icon'}> </a>
+        )
+    }
+}
+
 class ChocolateHeader extends React.Component {
     render() {
         return (
@@ -13,12 +21,12 @@ class ChocolateHeader extends React.Component {
             </section>
             <section className="logo-container-2">
                 <div className="partner-logos">
-                    <a href="facebook.com" className="facebook icon"> </a>
-                    <a href="twitter.com" className="twitter icon"> </a>
-                    <a href="google.com/" className="google icon"> </a>
-                    <a href="instagram.com" className="instagram icon"> </a>
-                    <a href="flickr.com" className="flickr icon"> </a>
-                    <a href="pintrist.com" className="pintrist icon"> </a>
+                    <ChocolateLinks site='facebook'/>
+                    <ChocolateLinks site='twitter'/> 
+                    <ChocolateLinks site='google'/> 
+                    <ChocolateLinks site='instagram'/> 
+                    <ChocolateLinks site='flickr'/> 
+                    <ChocolateLinks site='pintrist'/> 
                 </div>
                 <div className="contact-logos">
                     <a href="index.html" className="rss icon"> </a>

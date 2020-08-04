@@ -1,18 +1,26 @@
 import React from 'react';
 
+class AuthorInformation extends React.Component {
+    render() {
+        return(
+            <div className="author-info-area">
+                <div className="author-photo"></div>
+                <section className="author-text">
+                    <div className="author-name">{this.props.author}</div>
+                    <div className="author-information">Food enthusiast, photography fan. Add a pinch of raw foodism and that's <br /> pretty much who I am.</div>
+                </section>
+            </div>
+        )
+    }
+}
+
 class ChocolateFooter extends React.Component {
     render() {
         return (
             <footer>
                 <div className="hr-box"></div>
                 <div className="footer-top">
-                    <div className="author-info-area">
-                        <div className="author-photo"></div>
-                        <section className="author-text">
-                            <div className="author-name">Vanessa Stevenson</div>
-                            <div className="author-information">Food enthusiast, photography fan. Add a pinch of raw foodism and that's <br /> pretty much who I am.</div>
-                        </section>
-                    </div>
+                    <AuthorInformation author='Vanessa Stevenson' />
                     <button className="recipe-button">SHARE RECIPE</button>
                 </div>
                 <div className="spacer-div">
